@@ -1,3 +1,5 @@
+import os
+import math
 import csv
 import pickle
 import numpy as np
@@ -75,14 +77,14 @@ def parse_data_from_df(dataframe, column=str):
     times = np.array([rowidx for rowidx in range(0, len(values))])
             
     return times, values
-    
-def train_val_split(time, series, time_step):
+
+def train_val_split(time, series, time_step, time_stop):
 
     time_train = time[:time_step]
     series_train = series[:time_step]
     
-    time_valid = time[time_step:]
-    series_valid = series[time_step:]
+    time_valid = time[time_step:time_stop]
+    series_valid = series[time_step:time_stop]
 
     return time_train, series_train, time_valid, series_valid
 
@@ -132,10 +134,51 @@ def compute_metrics(true_series, forecast):
     rmse = tf.sqrt(mse)
     mape = tf.keras.metrics.mean_absolute_percentage_error(true_series, forecast)
 
+    # Account for different sized metrics (for longer horizons, we want to reduce metrics to a single value)
+    if mae.ndim > 0:
+      mae = tf.reduce_mean(mae)
+      mse = tf.reduce_mean(mse)
+      rmse = tf.reduce_mean(rmse)
+      mape = tf.reduce_mean(mape)
+
     return {"mae": mae.numpy(),
           "mse": mse.numpy(),
           "rmse": rmse.numpy(),
           "mape": mape.numpy()}
+
+def visualize_mae_loss(history):
+    # Get mae and loss from history log
+    mae=history.history['mae']
+    loss=history.history['loss']
+
+    # Get number of epochs
+    epochs=range(len(loss)) 
+
+    # Plot mae and loss
+    plot_series(
+        time=epochs, 
+        series=(mae, loss), 
+        title='MAE and Loss', 
+        xlabel='MAE',
+        ylabel='Loss',
+        legend=['MAE', 'Loss']
+        )
+
+    # Only plot the last 80% of the epochs
+    zoom_split = int(epochs[-1] * 0.2)
+    epochs_zoom = epochs[zoom_split:]
+    mae_zoom = mae[zoom_split:]
+    loss_zoom = loss[zoom_split:]
+
+    # Plot zoomed mae and loss
+    plot_series(
+        time=epochs_zoom, 
+        series=(mae_zoom, loss_zoom), 
+        title='MAE and Loss', 
+        xlabel='MAE',
+        ylabel='Loss',
+        legend=['MAE', 'Loss']
+        )
 
 def model_forecast(model, series, window_size, batch_size):
     ds = tf.data.Dataset.from_tensor_slices(series)
@@ -144,6 +187,24 @@ def model_forecast(model, series, window_size, batch_size):
     ds = ds.batch(batch_size).prefetch(1)
     forecast = model.predict(ds)
     return forecast
+
+def evaluate_forecast(model, time, series, time_valid, series_valid,
+                      time_step, time_stop, window_size, batch_size):
+  # Slice the forecast to get only the predictions for the validation set
+  forecast_valid_series = series[time_step - window_size:time_stop]
+
+  # Compute the forecast for all the series
+  forecast_valid = model_forecast(model, forecast_valid_series, window_size, batch_size).squeeze()
+  forecast = model_forecast(model, series, window_size, batch_size).squeeze()
+
+  # Plot the forecast
+  plt.figure(figsize=(10, 6))
+  plot_series(time_valid, (series_valid, forecast_valid))
+
+  plt.figure(figsize=(10, 6))
+  plot_series(time[window_size-1:], (series[window_size-1:], forecast))
+  
+  return forecast_valid
 
 def make_future_forecast(values, model, into_future, window_size) -> list:
     """
@@ -190,3 +251,23 @@ def plot_future_forecast(timesteps, values, format=".", start=0, end=None, label
     if label:
         plt.legend(fontsize=14) # make label bigger
     plt.grid(True)
+
+PATH = "./saved_model"
+
+def get_model_dir(path):
+    
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    model_dirs = [int(i) for i in os.listdir(path)]
+
+    current_model = "1" if len(model_dirs)==0 else str(max(model_dirs)+1)
+
+    return path + "/" + current_model + "/"
+
+
+# Create a function to implement a ModelCheckpoint callback with a specific filename
+def create_model_checkpoint(save_path="saved_model"):
+  return tf.keras.callbacks.ModelCheckpoint(filepath=get_model_dir(save_path),
+                                            verbose=0, # only output a limited amount of text
+                                            save_best_only=True)
