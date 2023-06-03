@@ -1,7 +1,7 @@
 # autoforex-machine-learning
 Repository for Machine Learning Part of AutoForex App
 
-Progress so far:
+### Progress so far:
 
 ## AUD/IDR Rolling Window Approach DNN Model
 
