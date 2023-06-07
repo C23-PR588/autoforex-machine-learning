@@ -20,9 +20,10 @@ numpy
 csv
 os
 ```
-    
-## Forecasting Currency Exchange Rate to IDR
+## Exploratory Data Analysis
+[EDA](https://github.com/C23-PR588/autoforex-machine-learning/blob/agung-madani/EDA_exploratory_data_analysis.ipynb)
 
+## Forecasting Currency Exchange Rate to IDR
 This forecasting has 10 features currency which is:
 - 1: EUR
 - 2: USD 
@@ -131,26 +132,24 @@ Second Model
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/74a13d86-2eed-47dc-a5d6-36297be9f13d)
 
 Forecasting 10 days futures ahead
-
-Based on the evaluation,
-##### EUR/IDR
+#### EUR/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/48fa043d-4623-4b25-ba0f-fb267db9fd66)
-##### USD/IDR
+#### USD/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/10576ca6-7389-4f17-8a40-cb7bafc6f335)
-##### JPY/IDR
+#### JPY/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/972c5813-ece2-49d9-bb5d-f937197640e3)
-##### GBP/IDR
+#### GBP/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/886c7d5c-0b4a-4343-a4ba-7b1afba3c868)
-##### SGD/IDR
+#### SGD/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/f67f8a5c-e4b9-4875-b417-d4fa75423e2d)
-##### AUD/IDR
+#### AUD/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/bea69bf2-fa9a-4228-8c19-ba2ce9578b5d)
-##### CNY/IDR
+#### CNY/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/0d118b43-d605-49a9-be36-1735826e93a2)
-##### CAD/IDR
+#### CAD/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/890aa3ac-5874-4467-82d2-eb77d6cc4ad9)
-##### MYR/IDR
+#### MYR/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c5063f45-5701-4a07-9efe-40ebaaa8cac8)
-##### RUB/IDR
+#### RUB/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/bcc1f895-01e6-4182-949d-35a6e56f9301)
 
