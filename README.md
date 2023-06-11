@@ -22,6 +22,7 @@ pandas
 numpy
 csv
 os
+datetime
 ```
 ## Exploratory Data Analysis
 [EDA](https://github.com/C23-PR588/autoforex-machine-learning/blob/agung-madani/EDA_exploratory_data_analysis.ipynb)
@@ -134,45 +135,77 @@ Second Model:
 
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/74a13d86-2eed-47dc-a5d6-36297be9f13d)
 
-Forecast:
+Model Evaluate & Forecast:
 #### EUR/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/6faf2dc0-85f4-45ca-bce1-88abace722d0)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/906cf49f-cf01-4235-8a7a-641571b26982)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c615a154-666c-404c-9ad1-8e2e152ed8fc)
 #### USD/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/f62dab0b-ce36-4bfc-8463-97e10422d6e3)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/dec17adf-5903-4a13-9cb8-ecc308ef1670)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/311d844a-6ca5-41c3-970d-9d3bf8bde31f)
 #### JPY/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/519179af-068c-4ce7-ae12-b498018f4caf)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/d2f5d2cd-ea22-459a-aab3-4a8e0df2fe8a)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/051ce6bb-fc4f-4d77-999d-c21ab03a0a97)
 #### GBP/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c4cf6bb1-43a5-46ff-b43f-94ee26861a17)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/f07cd912-41b9-4bdb-bc8b-8d3a6b403064)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/bdc31ee3-7316-40ac-8d2e-0da8cbc5ca5c)
 #### SGD/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/587b86dd-236d-4a7b-a118-a741f014bc1b)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/012c8ee8-a600-400c-8f4a-2801c4fe9b6b)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c87813a1-67b5-4a6d-b1af-a54b4349af05)
 #### AUD/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/82466601-d179-43b4-98c9-72a9b45f54a7)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/7071c22f-7c86-4c9d-812b-4e930854ff8f)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/611c9406-2bac-4eff-b18c-3fab559c3cd4)
 #### CNY/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/330fa4b9-8dea-4196-bf43-8b75717960b4)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/92ea6f6a-bb0e-4156-a7a0-97bc3e54e92b)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/6a4dcafd-8062-46ef-9668-7d7b44003066)
 #### CAD/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/20153225-1596-4e3f-9b5f-f89cebddd4cf)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/1a7941b4-1fe6-460d-9adc-548fdcded851)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/f9eb596c-c7e7-4d2e-b3b2-b50f0771e47e)
 #### MYR/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/2fc59cf2-d4f1-4a17-a422-f8d0913d45eb)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/63d213f4-19c0-4b1f-badc-7d5f480bd9a9)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c9ad80cb-f1dd-49cf-bc56-e8f605ce42ca)
 #### RUB/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/79819003-8463-44f2-84c5-d0d1b384b129)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/fec5cd2c-1ca3-4bf7-9e4e-585d3c8f46a6)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c69cacf5-51e2-4eb7-bec7-4f8245449c3f)
 
 ## Forecast a Month futures ahead
 Below are MAE, MSE, RMSE, MAPE, MASE for each currency:
 
 First Model:
 
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/11682cce-40ed-4a2c-94ca-45ca1b13ab03)
 
 Second Model:
 
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/3b9badf6-0238-4c6c-bcfc-ad77448c6109)
 
 Forecast:
 #### EUR/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/7e330373-319c-4932-a787-6cb5c66fabd4)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/d274aa84-5766-4de0-aa46-bd6d4dc3a2f7)
 #### USD/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/323ee283-6d6d-4a50-8273-5d0eb27ffeb1)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/21343240-5042-46d7-baa1-287192785a3f)
 #### JPY/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/fe214bf5-0728-48b1-bfd4-1f3c86d6365e)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/ff5935b9-fef7-4be4-9df6-336f30127f0d)
 #### GBP/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/e968e40a-df48-456e-b4b0-2b00b0068d28)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/a90c2010-6041-4201-b163-acfe719d8ddd)
 #### SGD/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/84c7d02e-282d-48f8-82a9-16eaa15a0feb)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/b458200f-d81c-42aa-b689-430226f66463)
 #### AUD/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/6955b1b0-c66e-45d2-85fe-6b75ad82b74c)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/603b83ff-04dc-4847-8e65-30dd071be1ab)
 #### CNY/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/68ab60fe-f6f2-423f-99b7-723b7eeb03ee)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/f1a118a5-ee76-4ee4-8366-29dc690b8bd6)
 #### CAD/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/05ead57a-7d50-437d-aac4-e0304fcf338c)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/e598bda0-40a3-48b8-b9b5-c24805d0c16a)
 #### MYR/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/fa17f9de-fef7-4b51-a8e7-1402d4b2ac39)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/74e06406-7bb6-45e8-bafe-f012f8f34fb1)
 #### RUB/IDR
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/d04aa9e9-3317-46a9-8f60-81f124c2f41f)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/01c38898-3de6-44c5-9df1-c26e791ca93a)
