@@ -4,11 +4,14 @@ Machine Learning for forecasting some currency into Indonesia Rupiah.
 
 ## Contributing
 Team Machine Learning on :
-- [Agung Rashif Madani](https://www.linkedin.com/in/agung-rashif-madani-905b75222/)
+- [Agung Rashif Madani M200DKX4537](https://www.linkedin.com/in/agung-rashif-madani-905b75222/)
 - []()
 
 ## Dataset
 We use API to get the Historical Data from [FreeCurrencyAPI](https://freecurrencyapi.com/)
+There are two kind of forecast, 
+1. Forecast a week which using per daily dataset(~3600 samples),
+2. Forecast a month which using resample into per 3 days dataset(~1200 samples).
 
 ## Library
 Library we use a lot to create the model
@@ -120,36 +123,56 @@ def second_model(train_set, valid_set, window_size):
     
     return model
 ```
-
+## Forecast a Week futures ahead
 Below are MAE, MSE, RMSE, MAPE, MASE for each currency:
 
-First Model
+First Model:
 
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/af85c3bf-dbbb-4801-952d-0dff0cb6d05b)
 
-Second Model
+Second Model:
 
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/74a13d86-2eed-47dc-a5d6-36297be9f13d)
 
-Forecasting 10 days futures ahead
+Forecast:
 #### EUR/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/48fa043d-4623-4b25-ba0f-fb267db9fd66)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/6faf2dc0-85f4-45ca-bce1-88abace722d0)
 #### USD/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/10576ca6-7389-4f17-8a40-cb7bafc6f335)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/f62dab0b-ce36-4bfc-8463-97e10422d6e3)
 #### JPY/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/972c5813-ece2-49d9-bb5d-f937197640e3)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/519179af-068c-4ce7-ae12-b498018f4caf)
 #### GBP/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/886c7d5c-0b4a-4343-a4ba-7b1afba3c868)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c4cf6bb1-43a5-46ff-b43f-94ee26861a17)
 #### SGD/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/f67f8a5c-e4b9-4875-b417-d4fa75423e2d)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/587b86dd-236d-4a7b-a118-a741f014bc1b)
 #### AUD/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/bea69bf2-fa9a-4228-8c19-ba2ce9578b5d)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/82466601-d179-43b4-98c9-72a9b45f54a7)
 #### CNY/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/0d118b43-d605-49a9-be36-1735826e93a2)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/330fa4b9-8dea-4196-bf43-8b75717960b4)
 #### CAD/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/890aa3ac-5874-4467-82d2-eb77d6cc4ad9)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/20153225-1596-4e3f-9b5f-f89cebddd4cf)
 #### MYR/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c5063f45-5701-4a07-9efe-40ebaaa8cac8)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/2fc59cf2-d4f1-4a17-a422-f8d0913d45eb)
 #### RUB/IDR
-![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/bcc1f895-01e6-4182-949d-35a6e56f9301)
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/79819003-8463-44f2-84c5-d0d1b384b129)
 
+## Forecast a Month futures ahead
+Below are MAE, MSE, RMSE, MAPE, MASE for each currency:
+
+First Model:
+
+
+Second Model:
+
+
+Forecast:
+#### EUR/IDR
+#### USD/IDR
+#### JPY/IDR
+#### GBP/IDR
+#### SGD/IDR
+#### AUD/IDR
+#### CNY/IDR
+#### CAD/IDR
+#### MYR/IDR
+#### RUB/IDR
