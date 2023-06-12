@@ -8,7 +8,7 @@ Team Machine Learning on :
 - []()
 
 ## Dataset
-We use API to get the Historical Data from [FreeCurrencyAPI](https://freecurrencyapi.com/)
+We use API to get the 10 years Historical Data from [FreeCurrencyAPI](https://freecurrencyapi.com/)
 There are two kind of forecast, 
 1. Forecast a week which using per daily dataset(~3600 samples),
 2. Forecast a month which using resample into per 3 days dataset(~1200 samples).
@@ -125,6 +125,8 @@ def second_model(train_set, valid_set, window_size):
     return model
 ```
 ## Forecast a Week futures ahead
+Forecast a week which using per daily dataset(~3600 samples)
+
 Below are MAE, MSE, RMSE, MAPE, MASE for each currency:
 
 First Model:
@@ -168,6 +170,8 @@ Model Evaluate & Forecast:
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/c69cacf5-51e2-4eb7-bec7-4f8245449c3f)
 
 ## Forecast a Month futures ahead
+Forecast a month which using resample into per 3 days dataset(~1200 samples).
+
 Below are MAE, MSE, RMSE, MAPE, MASE for each currency:
 
 First Model:
