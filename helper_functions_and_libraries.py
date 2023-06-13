@@ -149,7 +149,9 @@ def compute_metrics(true_series, forecast):
 def visualize_mae_loss(history):
     # Get mae and loss from history log
     mae=history.history['mae']
+    val_mae=history.history['val_mae']
     loss=history.history['loss']
+    val_loss=history.history['val_loss']
 
     # Get number of epochs
     epochs=range(len(loss)) 
@@ -157,27 +159,20 @@ def visualize_mae_loss(history):
     # Plot mae and loss
     plot_series(
         time=epochs, 
-        series=(mae, loss), 
-        title='MAE and Loss', 
+        series=(mae, val_mae), 
+        title='MAE and val MAE', 
         xlabel='MAE',
-        ylabel='Loss',
-        legend=['MAE', 'Loss']
+        ylabel='val MAE',
+        legend=['MAE', 'val MAE']
         )
 
-    # Only plot the last 80% of the epochs
-    zoom_split = int(epochs[-1] * 0.2)
-    epochs_zoom = epochs[zoom_split:]
-    mae_zoom = mae[zoom_split:]
-    loss_zoom = loss[zoom_split:]
-
-    # Plot zoomed mae and loss
     plot_series(
-        time=epochs_zoom, 
-        series=(mae_zoom, loss_zoom), 
-        title='MAE and Loss', 
-        xlabel='MAE',
-        ylabel='Loss',
-        legend=['MAE', 'Loss']
+        time=epochs, 
+        series=(loss, val_loss), 
+        title='LOSS and val LOSS', 
+        xlabel='LOSS',
+        ylabel='val LOSS',
+        legend=['LOSS', 'val LOSS']
         )
 
 def model_forecast(model, series, window_size, batch_size):
