@@ -5,8 +5,8 @@ Machine Learning for forecasting some currency into Indonesia Rupiah.
 ## Contributing
 Team Machine Learning on :
 - [Agung Rashif Madani M200DKX4537](https://www.linkedin.com/in/agung-rashif-madani-905b75222/)
-- [Bisma Nurrauf M181DSX0556]()
-- [Frinaldi Muhammad Syauqi M122DKX4523]()
+- [Bisma Nurrauf M181DSX0556](https://www.linkedin.com/in/bisma-nurrauf-a608b21b8/)
+- [Frinaldi Muhammad Syauqi M122DKX4523](https://www.linkedin.com/in/frinaldisyauqi/)
 
 ## Dataset
 We use API to get the 10 years Historical Data from [FreeCurrencyAPI](https://freecurrencyapi.com/)
@@ -26,7 +26,7 @@ os
 datetime
 ```
 ## Exploratory Data Analysis
-[EDA](https://github.com/C23-PR588/autoforex-machine-learning/blob/agung-madani/EDA_exploratory_data_analysis.ipynb)
+To see our data exploration and analysis, [click here](https://github.com/C23-PR588/autoforex-machine-learning/blob/agung-madani/EDA_exploratory_data_analysis.ipynb).
 
 ## Forecasting Currency Exchange Rate to IDR
 This forecasting has 10 features currency which is:
