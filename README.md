@@ -5,7 +5,8 @@ Machine Learning for forecasting some currency into Indonesia Rupiah.
 ## Contributing
 Team Machine Learning on :
 - [Agung Rashif Madani M200DKX4537](https://www.linkedin.com/in/agung-rashif-madani-905b75222/)
-- []()
+- [Bisma Nurrauf M181DSX0556]()
+- [Frinaldi Muhammad Syauqi M122DKX4523]()
 
 ## Dataset
 We use API to get the 10 years Historical Data from [FreeCurrencyAPI](https://freecurrencyapi.com/)
@@ -137,6 +138,10 @@ Second Model:
 
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/74a13d86-2eed-47dc-a5d6-36297be9f13d)
 
+As comparison using baseline model
+
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/2ba0a857-da39-41e9-8af5-9431db8b2dd0)
+
 Model Evaluate & Forecast:
 #### EUR/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/906cf49f-cf01-4235-8a7a-641571b26982)
@@ -181,6 +186,10 @@ First Model:
 Second Model:
 
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/3b9badf6-0238-4c6c-bcfc-ad77448c6109)
+
+As comparison using baseline model
+
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/e2564fd8-7d46-4261-afba-987af968757d)
 
 Forecast:
 #### EUR/IDR
