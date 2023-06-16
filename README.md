@@ -1,11 +1,27 @@
 # Machine Learning Autoforex-App
 
+## Step by Step Replication Guide
+
+Requirements:
+Python (>= 3.6), TensorFlow (>= 2.0), Pandas (>= 1.0), NumPy (>= 1.0), Matplotlib (>= 3.0), Jupyter Notebook (optional but recommended)
+
+Steps:
+1. Prepare the dataset: Obtain and preprocess the time series data from [FreeCurrencyAPI](https://freecurrencyapi.com/) or you can use our dataset [here](https://github.com/C23-PR588/autoforex-machine-learning/blob/main/currency_data_10_years.csv).
+2. Explore and visualize: Gain insights and plot the data using Matplotlib [EDA](https://github.com/C23-PR588/autoforex-machine-learning/blob/agung-madani/EDA_exploratory_data_analysis.ipynb).
+3. Split the data: Divide the dataset into training and testing sets.
+4. Build the model: Choose an window size architecture and implement it using TensorFlow's Keras API.
+5. Train and adjust: Train the model, monitor the process, and adjust hyperparameters if needed.
+6. Evaluate performance: Use evaluation metrics (e.g., MSE, RMSE) and visualize predictions.
+7. Step 3 - 6, you can get the by open `.ipynb` from 01 - 09 and you can adjust as you needed
+9. Open 10.ipynb to deployment and prediction using Docker and TFServing: Save the model, preprocess new data, and make future predictions.
+
 Machine Learning for forecasting some currency into Indonesia Rupiah.
 
 ## Contributing
 Team Machine Learning on :
 - [Agung Rashif Madani M200DKX4537](https://www.linkedin.com/in/agung-rashif-madani-905b75222/)
-- []()
+- [Bisma Nurrauf M181DSX0556](https://www.linkedin.com/in/bisma-nurrauf-a608b21b8/)
+- [Frinaldi Muhammad Syauqi M122DKX4523](https://www.linkedin.com/in/frinaldisyauqi/)
 
 ## Dataset
 We use API to get the 10 years Historical Data from [FreeCurrencyAPI](https://freecurrencyapi.com/)
@@ -16,7 +32,8 @@ There are two kind of forecast,
 ## Library
 Library we use a lot to create the model
 
-```tensorflow
+```
+tensorflow
 matplotlib.pyplot
 pandas
 numpy
@@ -25,7 +42,7 @@ os
 datetime
 ```
 ## Exploratory Data Analysis
-[EDA](https://github.com/C23-PR588/autoforex-machine-learning/blob/agung-madani/EDA_exploratory_data_analysis.ipynb)
+To see our data exploration and analysis, [click here](https://github.com/C23-PR588/autoforex-machine-learning/blob/agung-madani/EDA_exploratory_data_analysis.ipynb).
 
 ## Forecasting Currency Exchange Rate to IDR
 This forecasting has 10 features currency which is:
@@ -137,6 +154,10 @@ Second Model:
 
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/74a13d86-2eed-47dc-a5d6-36297be9f13d)
 
+As comparison using baseline model
+
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/2ba0a857-da39-41e9-8af5-9431db8b2dd0)
+
 Model Evaluate & Forecast:
 #### EUR/IDR
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/906cf49f-cf01-4235-8a7a-641571b26982)
@@ -181,6 +202,10 @@ First Model:
 Second Model:
 
 ![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/3b9badf6-0238-4c6c-bcfc-ad77448c6109)
+
+As comparison using baseline model
+
+![image](https://github.com/C23-PR588/autoforex-machine-learning/assets/121701309/e2564fd8-7d46-4261-afba-987af968757d)
 
 Forecast:
 #### EUR/IDR
