@@ -1,5 +1,20 @@
 # Machine Learning Autoforex-App
 
+## Step by Step Replication Guide
+
+Requirements:
+Python (>= 3.6), TensorFlow (>= 2.0), Pandas (>= 1.0), NumPy (>= 1.0), Matplotlib (>= 3.0), Jupyter Notebook (optional but recommended)
+
+Steps:
+1. Prepare the dataset: Obtain and preprocess the time series data from [FreeCurrencyAPI](https://freecurrencyapi.com/) or you can use our dataset [here](https://github.com/C23-PR588/autoforex-machine-learning/blob/main/currency_data_10_years.csv).
+2. Explore and visualize: Gain insights and plot the data using Matplotlib [EDA](https://github.com/C23-PR588/autoforex-machine-learning/blob/agung-madani/EDA_exploratory_data_analysis.ipynb).
+3. Split the data: Divide the dataset into training and testing sets.
+4. Build the model: Choose an window size architecture and implement it using TensorFlow's Keras API.
+5. Train and adjust: Train the model, monitor the process, and adjust hyperparameters if needed.
+6. Evaluate performance: Use evaluation metrics (e.g., MSE, RMSE) and visualize predictions.
+7. Step 3 - 6, you can get the by open `.ipynb` from 01 - 09 and you can adjust as you needed
+9. Open 10.ipynb to deployment and prediction using Docker and TFServing: Save the model, preprocess new data, and make future predictions.
+
 Machine Learning for forecasting some currency into Indonesia Rupiah.
 
 ## Contributing
